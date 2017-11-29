@@ -1,0 +1,71 @@
+@import "reset";
+@import "settings";
+
+body {
+  position: relative;
+  padding: 1rem 1.6rem;
+  font-family: $font-family;
+  background-color: $background;
+}
+
+.edit {
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  font-size: 1.4rem;
+  transform: rotate(40deg);
+  color: $light-gray;
+}
+
+.user-grid {
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      display: block;
+      margin: 0.8em 0.4em;
+      border: 1px solid $border;
+    }
+  }
+
+}
+
+.user {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $white;
+  width: 240px;
+
+  &.user--away:before { background: $inactive-user; }
+
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background: $active-user;
+    border-radius: 100%;
+  }
+
+  .user__avatar {
+    width: 72px;
+    height: 72px;
+    border-right: 1px solid $light-gray;
+
+    img {
+      display: block;
+    }
+  }
+
+  .user__details {
+    padding: 1em;
+  }
+}

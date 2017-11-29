@@ -1,0 +1,5 @@
+<script>
+  window.boot = <%= raw_users(@users) %>;
+</script>
+
+<script src="<%= static_path(@conn, "/application.js") %>"></script>
